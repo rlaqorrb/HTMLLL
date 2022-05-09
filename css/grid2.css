@@ -1,0 +1,66 @@
+body {
+  margin: 0px;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+p, li, ul {
+  margin: 0;
+}
+
+.grid-container2 {
+  width: 750px;
+  height: 750px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "first first second" "first first third" "fourth fifth sixth";
+}
+.grid-container2 div {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+.grid-container2 img {
+  width: 250px;
+}
+.grid-container2 .first {
+  grid-area: first;
+  width: 500px;
+  height: 500px;
+}
+.grid-container2 .first img {
+  width: 500px;
+}
+.grid-container2 .second {
+  grid-area: second;
+}
+.grid-container2 .third {
+  grid-area: third;
+}
+.grid-container2 .fourth {
+  grid-area: fourth;
+}
+.grid-container2 .fifth {
+  grid-area: fifth;
+}
+.grid-container2 .sixth {
+  grid-area: sixth;
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-container2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "first" "second" "third" "fourth" "fifth" "sixth";
+  }
+  .grid-container2 .first {
+    width: 250px;
+    height: 250px;
+  }
+  .grid-container2 .first img {
+    width: 250px;
+  }
+}/*# sourceMappingURL=grid2.css.map */

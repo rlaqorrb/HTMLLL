@@ -1,0 +1,49 @@
+@use '_reset.scss';
+
+
+body{
+  height: 100vh;
+}
+
+.grid-container{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+    'header header header header'
+    'side content content content'
+    'side content content content'
+    'side content content content'
+  ;
+  div{
+    border: 1px solid whitesmoke;
+  }
+  .grid-nav{
+    background-color: cadetblue;
+    grid-area: header;
+/*     grid-column: 1 / 5; */
+  }
+  .grid-sidebar{
+    background-color: slateblue;
+    grid-area: side;
+/*     grid-row: 2 / 4; */
+  }
+  .grid-content{
+    background-color: lightslategray;
+    grid-area: content;
+/*     grid-column: 2 / 5;
+    grid-row: 2 / 4; */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-container{
+    grid-template-areas: 
+      'header header header header'
+      'side side side side'
+      'content content content content'
+      'content content content content'
+    ;
+  }
+}

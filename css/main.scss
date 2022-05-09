@@ -1,0 +1,222 @@
+
+  @use '_reset';
+
+  body{
+    height: 300vh;
+  }
+
+  @keyframes menuItem {
+    0%{
+      transform: translate(0);
+    }
+    50%{
+      transform: translateX(50px) skewX(-35deg);
+    }
+    100%{
+      transform: translate(0);
+    }
+  }
+
+  .nav-menu{
+    max-width: 300px;
+    z-index: 1;
+    position: fixed;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    width: 30vw;
+    transform: translateX(-60%);
+    transition: all 1s;
+    p{
+      padding: 20px 0px 0px 0px;
+    }
+    .menu-title{
+      transform: translateX(70%);
+      transition: all 1s;
+    }
+    .menu-item{
+      text-align: center;
+      transition: all 1s;
+    }
+  }
+
+  .nav-menu:hover{
+    transform: translateX(0);
+    .menu-title{
+      transform: translateX(43%);
+    }
+    .menu-item{
+      animation-name: 'menuItem';
+      animation-duration: .9s;
+    }
+  }
+
+
+
+  .container{
+    max-width: 1200px;
+    width: 80%;
+    margin-left: 15vw;
+    margin-right: auto;
+  }
+
+
+.list-container{
+  list-style: none;
+  max-width: 500px;
+  font-weight: 500;
+  font-size: 18px;
+  li{
+    border: 1px solid #eee;
+    padding: 20px;
+  }
+  p{
+    margin: 0px;
+  }
+  .active{
+    background-color: #007BFF;
+    color: white;
+  }
+}
+
+@mixin alert-box($bgColor, $txtColor) {
+  padding: 15px;
+  color: $txtColor;
+  background-color: $bgColor;
+  margin: 10px 0px 10px 0px;
+  border-radius: 10px;
+  p{
+    margin: 0px;
+  }
+}
+
+.alert-box-green{
+  @include alert-box(#DFF0D8, #3F776A)
+}
+
+.alert-box-blue{
+  @include alert-box(#D8ECF7, #317095)
+}
+
+.alert-box-red{
+  @include alert-box(#FCF8E3, #916F42)
+}
+
+.row{
+/*   width: 100%; */
+  border: 1px solid #D7D1E0;
+  padding: 1px;
+  margin-top: 10px;
+  div::before{
+    content: '';
+    display: block;
+  }
+  div{
+    border: 1px solid #D7D1E0;
+    float: left;
+    background-color: #E5E1EA;
+  }
+  .col-6{
+    width: 50%;
+  }
+  .col-4{
+    width: 33.33%;
+  }
+  .col-3{
+    width: 25%;
+  }
+}
+
+.ani-text{
+  text-align: center;
+  background: #007BFF;
+  color: white;
+  border-radius: 10px;
+}
+
+.ani-text:hover{
+  animation-name: 작명;
+  animation-duration: .5s;
+}
+
+@keyframes 작명 {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(-100px);
+  }
+  75% {
+    transform: translateX(100px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+
+.heundle-btn{
+  border: none;
+  background: skyblue;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.heundle-btn:hover{
+  animation-name: 흔들버튼;
+  animation-duration: .8s;
+}
+
+@keyframes 흔들버튼 {
+  0%{
+    transform: rotate(0deg);
+  }
+  20%{
+    transform: rotate(15deg);
+  }
+  40%{
+    transform: rotate(-15deg);
+  }
+  60%{
+    transform: rotate(15deg);
+  }
+  80%{
+    transform: rotate(-15deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+
+@mixin plusItem {
+  position: relative;
+  top: 50%;
+  background-color: black;
+  width: 20px;
+  height: 3px;
+}
+
+.plus{
+  width: 20px;
+  height: 20px;
+  .plus1{
+    @include plusItem();
+  }
+  .plus2{
+    @include plusItem();
+    transform: rotate(90deg) translateX(-3px);
+  }
+}
+
+.plus:hover {
+  animation-name: turn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes turn {
+  0% { transform: rotate(0deg) }
+  25% { transform: rotate(-15deg) }
+  100% { transform: rotate(45deg) scale(1.5)}
+} 

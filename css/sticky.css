@@ -1,0 +1,172 @@
+body {
+  margin: 0px;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+p, li, ul {
+  margin: 0;
+}
+
+.side-navbar {
+  position: fixed;
+  background-color: #494BB4;
+  width: 150px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(-105px);
+  transition: all 0.8s;
+}
+.side-navbar .side-navbar-icon-container {
+  margin-top: 20px;
+  padding-bottom: 10px;
+  width: 80%;
+}
+.side-navbar .side-navbar-icon-container .side-navbar-icon {
+  transition: all 0.8s;
+}
+.side-navbar .side-navbar-icon-container a {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: white;
+}
+.side-navbar .side-navbar-icon-container a p {
+  transition: all 1s;
+}
+
+.side-navbar:hover {
+  transform: translateX(0%);
+}
+.side-navbar:hover .side-navbar-icon-container {
+  margin-left: 20px;
+}
+.side-navbar:hover .side-navbar-icon {
+  transform: translateX(-100px);
+}
+.side-navbar:hover p {
+  transform: translateX(40px);
+}
+
+.container {
+  background-color: #F9F9F9;
+  margin-left: 45px;
+  height: 100vh;
+}
+.container .upper-navbar-container {
+  background-color: white;
+  box-shadow: 0px 5px 10px #e6e3e3;
+}
+.container .upper-navbar-container .upper-navbar {
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .upper-navbar-container .upper-navbar .upper-navbar-search {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.container .upper-navbar-container .upper-navbar .upper-navbar-search input {
+  border: 1px solid gray;
+  height: 32px;
+  width: 180px;
+  border-radius: 3px;
+  border-right: none;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  transition: all 1s;
+  padding-left: 6px;
+}
+.container .upper-navbar-container .upper-navbar .upper-navbar-search button {
+  background-color: #333A40;
+  color: white;
+  border: none;
+  height: 36px;
+  width: 36px;
+  border: 1px solid #333A40;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  cursor: pointer;
+}
+.container .upper-navbar-container .upper-navbar .upper-navbar-search input:focus {
+  width: 300px;
+  outline: none;
+}
+.container .upper-navbar-container .upper-navbar .upper-navbar-icon {
+  display: flex;
+  justify-content: space-between;
+}
+.container .upper-navbar-container .upper-navbar .upper-navbar-icon div {
+  padding: 10px;
+  color: #808080;
+}
+.container .dashboard {
+  width: 95%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container .dashboard .dashboard-box-container {
+  display: flex;
+  justify-content: space-between;
+}
+.container .dashboard .dashboard-box-container .dashboard-box {
+  width: 24%;
+  max-width: 250px;
+  height: 110px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #e6e3e3;
+}
+.container .dashboard .dashboard-box-container .dashboard-box .dashboard-box-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+.container .dashboard .dashboard-box-container .dashboard-box .dashboard-box-content .dashboard-box-text p:nth-child(1) {
+  margin-bottom: 10px;
+}
+.container .dashboard .dashboard-box-container .dashboard-box .dashboard-box-content .dashboard-box-text p:nth-child(2) {
+  color: black;
+  font-weight: 800;
+}
+.container .dashboard .dashboard-box-container .dashboard-box .dashboard-box-content .dashboard-box-icon {
+  font-size: 28px;
+  color: #808080;
+}
+.container .dashboard .dashboard-box-container .dashboard-box:nth-child(1) {
+  border-left: 4px solid #89CFEB;
+}
+.container .dashboard .dashboard-box-container .dashboard-box:nth-child(2) {
+  border-left: 4px solid #40C95A;
+}
+.container .dashboard .dashboard-box-container .dashboard-box:nth-child(3) {
+  border-left: 4px solid #4B4EB5;
+}
+.container .dashboard .dashboard-box-container .dashboard-box:nth-child(4) {
+  border-left: 4px solid #FECA54;
+}
+.container .middle-content {
+  width: 95%;
+  max-width: 1400px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container .middle-content .chart-container {
+  box-shadow: 0px 0px 10px #e6e3e3;
+  width: 60%;
+}
+.container .middle-content .chart-container .chart-tilte {
+  font-weight: 800;
+  padding: 15px;
+  box-shadow: 0px 0px 4px #e6e3e3;
+}/*# sourceMappingURL=sticky.css.map */

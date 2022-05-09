@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/sticky.css">
+  <script src="https://kit.fontawesome.com/6e4abe1f96.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+</head>
+<body>
+  <div class="side-navbar">
+    <div style="padding: 1px;"></div>
+    <div class="side-navbar-icon-container">
+      <a href="">
+        <p>Home</p>
+        <div class="side-navbar-icon">
+          <i class="fa-solid fa-house"></i>
+        </div>
+      </a>
+    </div>
+    <div class="side-navbar-icon-container">
+      <a href="">
+        <p>Service</p>
+        <div class="side-navbar-icon">
+          <i class="fa-solid fa-headphones"></i>
+        </div>
+      </a>
+    </div>
+    <div class="side-navbar-icon-container">
+      <a href="">
+        <p>Alert</p>
+        <div class="side-navbar-icon">
+          <i class="fa-solid fa-flag"></i>
+        </div>
+      </a>
+    </div>
+    <div class="side-navbar-icon-container">
+      <a href="">
+        <p>Stats</p>
+        <div class="side-navbar-icon">
+          <i class="fa-solid fa-chart-pie"></i>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="upper-navbar-container">
+      <div class="upper-navbar">
+        <form class="upper-navbar-search">
+          <input type="text" placeholder="Search">
+            <button>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <div class="upper-navbar-icon">
+          <div class="upper-navbar-icon-bell">
+            <i class="fa-solid fa-bell"></i>
+          </div>
+          <div class="upper-navbar-icon-mail">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="brand">
+            <p>Minny Park</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dashboard">
+      <h3>Dashboard</h3>
+      <div class="dashboard-box-container">
+        <div class="dashboard-box">
+          <div class="dashboard-box-content">
+            <div class="dashboard-box-text">
+              <p>Earnings (Monthly)</p>
+              <p>$400,000</p>
+            </div>
+            <div class="dashboard-box-icon"><i class="fa-solid fa-calendar"></i></div>
+          </div>
+        </div>
+        <div class="dashboard-box">
+          <div class="dashboard-box-content">
+            <div class="dashboard-box-text">
+              <p>Earnings (Annual)</p>
+              <p>$800,000</p>
+            </div>
+            <div class="dashboard-box-icon"><i class="fa-solid fa-dollar-sign"></i></div>
+          </div>
+        </div>
+        <div class="dashboard-box">
+          <div class="dashboard-box-content">
+            <div class="dashboard-box-text">
+              <p>Tasks</p>
+              <p>13</p>
+            </div>
+            <div class="dashboard-box-icon"><i class="fa-solid fa-list-check"></i></div>
+          </div>
+        </div>
+        <div class="dashboard-box">
+          <div class="dashboard-box-content">
+            <div class="dashboard-box-text">
+              <p>Requests</p>
+              <p>26</p>
+            </div>
+            <div class="dashboard-box-icon"><i class="fa-solid fa-comments"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="middle-content">
+      <div class="chart-container">
+        <div class="chart-tilte">
+          <p>Earning Overview</p>          
+        </div>
+        <div class="chart">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+      <div class="Tasks">
+  
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <script>
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+          datasets: [{
+              label: 'Monthly',
+              data: [0, 10, 5, 3, 20, 30, 45],
+              fill : true,
+              backgroundColor: '#494BB4',
+              borderColor: '#494BB4',
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              y: {
+                  beginAtZero: true
+              }
+          },
+          elements: {
+            point: {
+              radius: 0
+            },
+            line: {
+              tension: 0
+            },
+            legend: {
+              display: true,
+              position: "bottom"
+            }
+          }
+      }
+  });
+  </script>
+</body>
+</html>
