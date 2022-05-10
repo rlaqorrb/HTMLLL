@@ -8,7 +8,7 @@ $boxShadow : #e6e3e3;
   position: fixed;
   background-color: $mainColor;
   width: 150px;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,7 +47,7 @@ $boxShadow : #e6e3e3;
 .container{
   background-color: #F9F9F9;
   margin-left: 45px;
-  height: 100vh;
+  min-height: 100vh;
   .upper-navbar-container{
     background-color: white;
     box-shadow: 0px 5px 10px $boxShadow;
@@ -121,6 +121,7 @@ $boxShadow : #e6e3e3;
           align-items: center;
           padding: 15px;
           .dashboard-box-text{
+            font-size: 15px;
             p:nth-child(1){
               margin-bottom: 10px;
             }
@@ -153,21 +154,112 @@ $boxShadow : #e6e3e3;
 
 
   .middle-content{
+    display: flex;
+    justify-content: space-between;
     width: 95%;
     max-width: 1400px;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     .chart-container{
+      border-radius: 5px;
       box-shadow: 0px 0px 10px $boxShadow;
       // padding: 15px;
-      boarder-radius: 5px;
       width: 60%;
       .chart-tilte{
+        background-color: #F9F9F9;
         font-weight: 800;
         padding: 15px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-radius: 5px;
         box-shadow: 0px 0px 4px $boxShadow;
+      }
+      .chart{
+        padding: 15px;
+        background-color: white;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-radius: 5px;
+      }
+    }
+
+    .Tasks{
+      width: 35%;
+      .task-title{
+        box-shadow: 0px 0px 10px $boxShadow;
+        font-weight: 800;
+        padding: 15px;
+        border-radius: 5px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
+      .task-content{
+        background-color: white;
+        box-shadow: 0px 0px 10px $boxShadow;
+        border-radius: 5px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        ul{
+          list-style: none;
+          padding: 0px;
+          li{
+            border-bottom: 1px solid $boxShadow;
+            padding: 10px 0px 10px 0px;
+            a{
+              text-decoration: none;
+              color: black;
+              div{
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 10px 5px 10px;
+                .pill{
+                  background-color: $mainColor;
+                  color: white;
+                  border-radius: 50px;
+                  font-size: 14px;
+                  text-align: center;
+                  padding: 0px 10px 0px 10px;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
 }
+
+
+// Mobile Style
+@media only screen and (max-width : 768px){
+  .container{
+    padding-bottom: 50px;
+    .dashboard{
+      .dashboard-box-container{
+        flex-direction: column;
+        .dashboard-box{
+          max-width: none;
+          width: 100%;
+          margin-bottom: 20px;
+          .dashboard-box-content{
+            .dashboard-box-text{
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+
+    .middle-content{
+      flex-direction: column;
+      .chart-container{
+        width: 100%;
+      }
+      .Tasks{
+        width: 100%;
+      }
+    }
+  }
+}
+
