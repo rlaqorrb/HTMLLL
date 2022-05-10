@@ -8,7 +8,7 @@ $boxShadow : #e6e3e3;
   position: fixed;
   background-color: $mainColor;
   width: 150px;
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -235,6 +235,18 @@ $boxShadow : #e6e3e3;
 @media only screen and (max-width : 768px){
   .container{
     padding-bottom: 50px;
+    .upper-navbar-container{
+      .upper-navbar{
+        .upper-navbar-search{
+          input{
+            width: 100px;
+          }
+          input:hover{
+            width: 110px;
+          }
+        }
+      }
+    }
     .dashboard{
       .dashboard-box-container{
         flex-direction: column;
