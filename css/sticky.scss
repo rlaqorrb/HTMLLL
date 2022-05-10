@@ -161,6 +161,7 @@ $boxShadow : #e6e3e3;
     .chart-container{
       box-shadow: 0px 0px 10px $boxShadow;
       // padding: 15px;
+      boarder-radius: 5px;
       width: 60%;
       .chart-tilte{
         font-weight: 800;
